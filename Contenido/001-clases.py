@@ -1,6 +1,8 @@
 # GUIA RÁPIDA DE CLASES EN PYTHON
 # Docente: Victor Saldivia Vera - Institución: Universidad de Los Lagos
 
+# Métodos de clase
+
 class Persona():
     
     # Constructor de Clase
