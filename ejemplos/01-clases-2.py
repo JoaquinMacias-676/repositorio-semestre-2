@@ -14,4 +14,6 @@ class Auto ():
     def girar(self):
         print(f"El {self.marca} {self.modelo} está girando")
 
-    
+auto1 = Auto("Ferrari", "F10", "1998", "rojo")
+
+auto1.arrancar()
