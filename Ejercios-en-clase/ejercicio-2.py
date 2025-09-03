@@ -20,18 +20,17 @@ class Coche ():
     
     def conducir(self):
         gasolina_resta = km_recorrer / 10
+        self.kilometros_recorridos += gasolina_resta * 10
         self.gasolina -= gasolina_resta
         if self.gasolina < 0:
-            print(f"El coche {self.marca} {self.modelo} no dispone de la gasolina suficiente para seguir conduciendo, a logrado recorrer km de {km_recorrer} km solicitados.")
-        elif self.gasolina == 0:
-            print(f"El coche {self.marca} {self.modelo} se ha quedado sin gasolina, pero a logrado recorrer los {km_recorrer} km solicitados.")
+            print(f"El coche {self.marca} {self.modelo} no dispone de la gasolina suficiente para seguir conduciendo, a logrado recorrer {self.kilometros_recorridos} km de {km_recorrer} km solicitados.")
         else:
             print(f"El coche {self.marca} {self.modelo} a recorrido {km_recorrer} km, le queda {self.gasolina} L de gasolina")
 
     def cargar_gasolina(self):
         gasolina_a_cargar = float(input("Ingrese la cantidad de gasolina que desea agregar: "))
         self.gasolina += gasolina_a_cargar
-
+        print(f"Gasolina que dispone el auto: {self.gasolina}")
 coche1 = Coche("Ferrari", "F355", "1998", "rojo", 10, 0)
 
 coche1.conducir()
