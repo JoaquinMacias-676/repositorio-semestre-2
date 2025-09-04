@@ -15,8 +15,8 @@ class Fraccion ():
         return Fraccion(self.numerador * other.numerador, self.denominador * other.denominador)
 
     def __eq__(self, other):
-        return Fraccion(self.numerador * other.denominador == other.numerador * self.denominador)
-    
+        return self.numerador * other.denominador == other.numerador * self.denominador
+     
 fraccion_1 = Fraccion(2, 2)
 fraccion_2 = Fraccion(5, 4)
 
@@ -26,4 +26,4 @@ comparacion = fraccion_1 == fraccion_2
 
 print(f"La suma entre la fracción {fraccion_1} y {fraccion_2} es {suma}")
 print(f"La multiplicación entre la fracción {fraccion_1} y {fraccion_2} da como producto {producto}")
-print(f"La comparación entre la fracción {fraccion_1} y {fraccion_2} es {comparacion}")
+print(f"¿La fracción {fraccion_1} y {fraccion_2} son iguales? {comparacion}")
