@@ -10,29 +10,17 @@ class Producto():
 
     # Método para actualizar el stock
     def actualizar_stock(self, nuevo_stock):
-        stock_antiguo = self.stock # Variable para guardar el stock antiguo 
         self.historial_stock.append(self.stock) # Agregando el stock anterior al historial
         self.stock = int(nuevo_stock) # Cambiando al nuevo stock
-        cambio_stock = stock_antiguo - self.stock # Variable para saber si hubo un aumento o decrecimiento del stock
-
-    # Condicional para definir el aumento o decrecimiento del stock
-        print(f"\nSe a cambiado la cantidad de {self.nombre_producto}, a pasado de {stock_antiguo} a {self.stock}.")
-        if cambio_stock > 0:
-            print(f"El stock de {self.nombre_producto} aumento")
-        elif cambio_stock == 0:
-            print(f"El stock de {self.nombre_producto} no a cambiado")
-        else:
-            print(f"El stock de {self.nombre_producto} a disminuido")
-        print(f"Historial de stock: {self.historial_stock}\n")
 
     # Método para calcular el valor total del producto
     def valor_total(self):
-        valor_total = self.precio_u * self.stock
-        print(f"El valor total de todos los productos es de ${valor_total} CLP")
+        return self.precio_u * self.stock
 
     def __str__(self):
-        
+        return f"\nProducto: {self.nombre_producto} | Código de Barra: {self.codigo_barra} | Precio Unitario: ${self.precio_u} CLP | Cantidad: {self.stock} | Historial Stock: {self.historial_stock} | Valor Total: ${self.valor_total()} CLP\n"
+    
 producto1 = Producto("Cebolla", 500, 20, "7 89200 00129")
 
 producto1.actualizar_stock(10)
-producto1.valor_total()
+print(producto1)
