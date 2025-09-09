@@ -32,24 +32,24 @@ class Inventario():
             print(f"Agregando el producto con código de barra {producto.codigo_barra} al Inventario")
 
     def actualizar_stock_inv(self, codigo_barra, nuevo_stock ):
+        codigo_barra = str(codigo_barra)
         if codigo_barra in self.productos:
             producto = self.productos[codigo_barra]
             antiguo_stock = producto.stock
             producto.actualizar_stock(nuevo_stock)
-            print(f"El producto {producto.nombre_producto} con código de barra {producto} a actualizado su stock de {antiguo_stock} a {producto.stock}.")
+            print(f"El producto {producto.nombre_producto} con código de barra {producto.codigo_barra} a actualizado su stock de {antiguo_stock} a {producto.stock}.")
         else:
             print(f"El producto ingresado no se encuentra en el inventario.")
 
 
 
-producto1 = Producto("Cebolla", 500, 20, "78920000129")
+producto1 = Producto("Cebolla", 500, 20, 78920000129)
 
 producto1.actualizar_stock(10)
 print(producto1)
 
 inventario1 = Inventario()
 
-inventario1.agregar_producto(producto1)
 inventario1.agregar_producto(producto1)
 
 inventario1.actualizar_stock_inv(78920000129, 40)
