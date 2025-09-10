@@ -41,9 +41,21 @@ class Inventario():
         else:
             print(f"El producto ingresado no se encuentra en el inventario.")
 
-
+    def __str__(self):
+        muestra_inventario = "\nProductos en el Inventario:\n"
+        for producto in self.productos.values():
+            muestra_inventario +=str(producto)
+        return muestra_inventario
+    
+    def valor_productos(self):
+        total = 0
+        for producto in self.productos.values():
+            total += producto.valor_total()
+        return total
 
 producto1 = Producto("Cebolla", 500, 20, 78920000129)
+producto2 = Producto("Manzana", 430, 30, 78420006859)
+producto3 = Producto("Naranja", 500, 10, 72820007519)
 
 producto1.actualizar_stock(10)
 print(producto1)
@@ -51,5 +63,10 @@ print(producto1)
 inventario1 = Inventario()
 
 inventario1.agregar_producto(producto1)
+inventario1.agregar_producto(producto2)
+inventario1.agregar_producto(producto3)
 
 inventario1.actualizar_stock_inv(78920000129, 40)
+
+print(inventario1)
+print(f"El valor de todos los productos en el inventario es de: ${inventario1.valor_productos()} CLP\n")
