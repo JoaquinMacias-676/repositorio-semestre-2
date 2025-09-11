@@ -60,21 +60,6 @@ class Espacio():
             informacion += str(gato)
         return informacion
 
-# probando a crear una Clase "CafeGatos" para guardar los espacios
-"""class CafeGatos():
-    def __init__(self):
-        self.espacios = []
-
-    def agregar_espacio(self, espacio_nuevo):
-        if espacio_nuevo in self.espacios:
-            print(f"El espacio {espacio_nuevo.nombre_espacio} ya se encuentra en el Café")
-        else:
-            self.espacios.append(espacio_nuevo)
-            print(f"El espacio {espacio_nuevo.nombre_espacio} ha sido agregado al Café")
-
-    def __str__(self):
-        return f"Espacios: {self.espacios}" """
-
 # Instanciando atributos del primer gato
 gato1 = Gato("Halfonso", 143, 7, 30, 40, "Naranja", 3)
 gato2 = Gato("Sky", 102, 2, 50, 30, "Gris", 1.5)
@@ -93,12 +78,3 @@ espacio1.agregar_gato(gato1)
 espacio1.agregar_gato(gato2)
 espacio1.agregar_gato(gato3)
 print(espacio1)
-
-"""
-# Instanciando atributo a la Clase "Cafe"
-cafe = CafeGatos()
-
-# Probando Métodos de la Clase "CaféGatos" 
-cafe.agregar_espacio(espacio1)
-
-print(cafe) """
