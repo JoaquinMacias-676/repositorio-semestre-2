@@ -1,6 +1,3 @@
-#GUIA RÁPIDA DE ENCAPSULACIÓN EN PYTHON
-#Docente: Victor Saldivia Vera - Institución: Universidad de Los Lagos
- 
 class CuentaBancaria:
     def __init__(self, titular, saldo):
         # Atributo público
@@ -31,7 +28,6 @@ class CuentaBancaria:
         intereses = self.__calcular_intereses()  # Se puede llamar al método privado desde dentro
         self.__saldo += intereses
         print(f"Se han agregado ${intereses} CLP en intereses")
-
 
 # Crear una cuenta bancaria
 cuenta = CuentaBancaria("Victor Saldivia", 100000)
