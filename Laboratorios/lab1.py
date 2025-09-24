@@ -4,15 +4,15 @@ class Gato():
     # Iniciando el Constructor
     def __init__(self, nombre, id, edad, energia, hambre, color, tamanio, salud, estado_salud):
         self.nombre = str(nombre)
-        self.__id = int(id) # Encapsulando Id para no ser usador fuera de la Clase "Gato"
+        self.__id = int(id) # Encapsulando Id para no ser usado fuera de la Clase "Gato"
         self.edad = int(edad)
         self.energia = int(energia)
         self.hambre = int(hambre)
         self.color = str(color)
         self.tamanio = float(tamanio)
-        self.__salud = int(salud) # Encapsulando la "salud" para no ser usador fuera de la Clase "Gato"
-        self.__estado_salud = str(estado_salud) # Encapsulando el "estado de salud" para no ser usador fuera de la Clase "Gato"
-        self.__historial = [estado_salud] # Encapsulando el "historial médico" para no ser usador fuera de la Clase "Gato"
+        self.__salud = int(salud) # Encapsulando la "salud" para no ser usado fuera de la Clase "Gato"
+        self.__estado_salud = str(estado_salud) # Encapsulando el "estado de salud" para no ser usado fuera de la Clase "Gato"
+        self.__historial = [estado_salud] # Encapsulando el "historial médico" para no ser usado fuera de la Clase "Gato"
     
     # Creando el método para que el gato juegue
     def jugar(self):
