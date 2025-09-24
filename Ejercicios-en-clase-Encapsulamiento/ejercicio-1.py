@@ -4,14 +4,14 @@ class Vehiculo():
         self.__modelo = str(modelo)
         self.__anio = int(anio)
         self.__disponibilidad = True
-        assert self.__anio >= 1500, print("ERROR: El año del vehículo es demasiado bajo")
+        assert self.__anio >= 1900, print("ERROR: El año del vehículo es demasiado bajo")
 
     def marcar_vendido(self):
         self.__disponibilidad = "No disponible"
 
     def __str__(self):
-        return f"Marca: {self.__marca} Modelo: {self.__modelo} Año: {self.__anio} Disponibilidad: {self.__disponibilidad}"
-    
+        return f"| Marca: {self.__marca} | Modelo: {self.__modelo} | Año: {self.__anio} | Disponibilidad: {self.__disponibilidad} |"
+
 class Concecionario():
     def __init__(self):
         self.lista_vehiculos = []
@@ -29,14 +29,20 @@ class Concecionario():
         else:
             print(f"========= VEHÍCULOS =========")
             for vehiculo in self.lista_vehiculos:
-                print(f"{vehiculo.__marca} {vehiculo.__modelo} {vehiculo.__anio}")
+                print(vehiculo)
 
 auto1 = Vehiculo("Toyota", "F10", 1980)
+auto2 = Vehiculo("Chevrolet", "M20", 2001)
+auto3 = Vehiculo("Toyota", "72", 1999)
 
 auto1.marcar_vendido
 print(auto1)
+print(auto2)
 
 concencionario = Concecionario()
 
 concencionario.agregar_vehiculo(auto1)
+concencionario.agregar_vehiculo(auto2)
+concencionario.agregar_vehiculo(auto1)
+concencionario.agregar_vehiculo(auto3)
 concencionario.mostrar_vehiculos()
