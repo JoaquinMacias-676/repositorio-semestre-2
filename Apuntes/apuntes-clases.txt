@@ -2,3 +2,5 @@
 
 -Las clases también tienen métodos, los cuales en palabras simples es crear una función, 
 como una suma entre dos variables, o hacer que ocurra cierto evento.
+
+Los Diagramas De Clases no tienen relación con POO
