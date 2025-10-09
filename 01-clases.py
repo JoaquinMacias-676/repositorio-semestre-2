@@ -41,5 +41,3 @@ print(f"La especie del animal es de un: {loro.especie}\n")
 gatito.correr()
 perrito.hacer_sonido()
 loro.dormir()
-
-#Probando
