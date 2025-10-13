@@ -9,7 +9,8 @@ class Agenda():
 
     __contador = 0
 
-    def __init__(self):
+    def __init__(self, titulo):
+        self.titulo = titulo
         self.__tareas = []
 
     def agregar(self, titulo: str):
@@ -24,7 +25,7 @@ class Agenda():
         for tarea in self.__tareas:
             if tarea.id == id:
                 tarea.hecha = True
-            return
+                return
         raise ValueError("Tarea no encontrada")
     
     def listar_pendientes(self):
@@ -48,6 +49,18 @@ class Agenda():
         return cls.__contador
     
 # Intanciando
+agenda1 = Agenda("Agenda 1")
+agenda2 = Agenda("Agenda 2")
 
+# Probando Métodos
+agenda1.agregar("Hacer la cama")
+agenda1.agregar("Cocinar")
+agenda1.agregar("Lavar los platos")
+agenda2.agregar("Estudiar")
+agenda1.marcar_hecha(1)
+print(f"Lista de tareas pendientes en {agenda1.titulo}: {agenda1.listar_pendientes()}")
+print(f"Lista de tareas pendientes en {agenda2.titulo}: {agenda2.listar_pendientes()}")
+print(f"Número total de tareas: {len(agenda1)}")
+print(f"Total de Tareas Creadas: {Agenda.total_creadas()}")
 
         
