@@ -62,5 +62,3 @@ print(f"Lista de tareas pendientes en {agenda1.titulo}: {agenda1.listar_pendient
 print(f"Lista de tareas pendientes en {agenda2.titulo}: {agenda2.listar_pendientes()}")
 print(f"Número total de tareas: {len(agenda1)}")
 print(f"Total de Tareas Creadas: {Agenda.total_creadas()}")
-
-        
