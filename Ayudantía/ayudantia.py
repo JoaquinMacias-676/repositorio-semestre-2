@@ -10,24 +10,20 @@ class Playlist():
     def agregar_cancion(self, nombre: str):
         if not nombre:
             raise ValueError("La canción no puede estar vacía")
-        for i in self.__canciones:
-            if not nombre == i:
-               self.__canciones.append(nombre)
-            else:
-                print("La canción no puede estar vacía")
+        if nombre in self.__canciones:
+            raise ValueError("La canción no puede estar repetida en la Playlist")
+        self.__canciones.append(nombre)
 
     def eliminar_cancion(self, nombre):
-        for i in self.__canciones: 
-            if nombre == i:
-                self.__canciones.remove(nombre)
-            else:
-                print("No se encontro la canción")
+        if not nombre in self.__canciones:
+            raise ValueError("La canción no se encuentra en la Playlist")
+        self.__canciones.remove(nombre)
 
     def __len__(self):
         return len(self.__canciones)
     
     def __str__(self):
-        return f"Playlist de {self.usuario}: {len(playlist1)} canciones"
+        return f"Playlist de {self.usuario}: {len(self)} canciones"
     
 playlist1 = Playlist("Joaquin")
 playlist1.agregar_cancion("Hola")
