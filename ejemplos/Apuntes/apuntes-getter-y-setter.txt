@@ -1,4 +1,0 @@
-@property actúa sobre un método para así no tener que agregar un get_ antes del método al momento de definirlo, y al momento de llamarlo,
-
-lo mismo con @atributo.setter, para no tener que poner set_
-
