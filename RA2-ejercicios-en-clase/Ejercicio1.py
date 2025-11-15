@@ -68,40 +68,10 @@ animales= [
 
 # Bucle para probar métodos
 for animal in animales:
+    print(f"==== Ficha de {animal.nombre}")
     animal.mostrar_ficha()
     animal.comer()
     animal.dormir()
-# Métodos de Perro
+    
+# Métodos Únicos
 
-print("\nPerro:\n")
-"""perro1.mostrar_ficha()
-
-perro1.comer()
-
-perro1.dormir()
-
-perro1.ladrar()"""
-
-# Métodos de Gato
-
-print("\nGato:\n")
-
-"""gato1.mostrar_ficha()
-
-gato1.comer()
-
-gato1.dormir()
-
-gato1.maullar()"""
-
-# Métodos de Pájaro
-
-print("\nPájaro:\n")
-
-"""pajaro1.mostrar_ficha()
-
-pajaro1.comer()
-
-pajaro1.dormir()
-
-pajaro1.volar()"""
