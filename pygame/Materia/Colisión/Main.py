@@ -27,7 +27,7 @@ while running:
 
     # Almacena la posición inicial de los rectángulos
 
-    posición_anterior_pequeño = rectangulo_pequeno.obtener_posicion()
+    posición_anterior_pequeno = rectangulo_pequeno.obtener_posicion()
     posición_anterior_grande = rectangulo_grande.obtener_posicion()
 
     # Mover Rectángulos
@@ -36,7 +36,7 @@ while running:
 
     if rectangulo_pequeno.rect.colliderect(rectangulo_grande.rect):
         # Si existe colosión, se reestablece la posición anterior
-        rectangulo_pequeno.restablecer_posicion(*posición_anterior_pequeño)
+        rectangulo_pequeno.restablecer_posicion(*posición_anterior_pequeno)
         rectangulo_grande.restablecer_posicion(*posición_anterior_grande)
         rectangulo_pequeno.cambiar_color(color_colision)
         rectangulo_grande.cambiar_color(color_colision)
