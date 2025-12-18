@@ -1,0 +1,7 @@
+El encapsulamiento sirve para "proteger", datos, variables, etc. Con el próposito de encapsular esos comportamientos, como los métodos.
+Es un mecanismo de protección, osea que desde una clase, no sé pueda cambiar los atributos de otra clase.
+
+Visibilidad privada: Solo se puede ser accedido/modificados dentro de la misma clase, no desde otra.
+Visibilidad pública: Los elementos que contienen son accesibles desde cualquier parte del punto, fuera o dentro de la clase
+
+No se puede llamar directamente a un método privado
